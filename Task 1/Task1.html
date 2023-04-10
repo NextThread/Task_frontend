@@ -1,0 +1,177 @@
+<!-- Edited by Anand Kumar Singh: Cloned website -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Included CSS file -->
+    <link rel="stylesheet" href="Task1.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amaranth&family=Chivo+Mono:wght@500&family=Lato:wght@400;700&family=Poppins:wght@500&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amaranth&family=Chivo+Mono:wght@500&family=Lato:wght@400;700&family=Poppins:wght@500&family=Titillium+Web:wght@300&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<!-- In this section of notification you can get notification of resent events -->
+
+    <notification class="alert">
+        <div class="notification">
+            Register for Codestudio Saturday Contest
+        </div>
+    </notification>
+
+<!-- In header section You can find website name, author name and contacts such as linkedin, instagram, twitter and telegram -->
+
+    <header class="header_container">
+        <div class="header">
+            <div class="title">
+                <div class="heading">takeUforward</div>
+                <div class="writer">~ Strive for Excellence</div>
+            </div>
+            <div class="contact_icons">
+                <div class="icons">
+                    <img src="./img/facebook.png">
+                </div>
+                <div class="icons">
+                    <img src="./img/twitter.png">
+                </div>
+                <div class="icons">
+                    <img src="./img/telegram.png">
+                </div>
+                <div class="icons">
+                    <img src="./img/youtbe.png">
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+<!-- This navbar section contain different options used to route in different pages -->
+
+    <navbar class="navbar">
+        <ul class="navbas_list">
+            <li class="options"><span>Striver's SDE Sheet</span></li>
+            <li class="options"><span>Striver's A2Z DSA Course/Sheet</span></li>
+            <li class="options"><span>Striver's DP Series</span></li>
+            <li class="options" id="sub_options">
+                <span class="options_name">CS Subjects
+                    <img
+                        src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/512/external-down-arrow-arrows-dreamstale-lineal-dreamstale-15.png">
+                </span>
+                <ul class="sub_options">
+                    <li><a href="#">SDE Core Sheet</a></li>
+                    <li><a href="#">Operating System</a></li>
+                    <li><a href="#">ComputerNetworks</a></li>
+                </ul>
+            </li>
+            <li class="options" id="sub_options">
+                <span>Interview Prep
+                    <img
+                        src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/512/external-down-arrow-arrows-dreamstale-lineal-dreamstale-15.png">
+                </span>
+                <ul class="sub_options">
+                    <li><a href="#">Blind 75</a></li>
+                    <li><a href="#">Striver Tree Series</a></li>
+                    <li><a href="#">Striver's CP Sheet</a></li>
+                </ul>
+            </li>
+            <li class="options" id="sub_options">
+                <span>Programming
+                    <img
+                        src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/512/external-down-arrow-arrows-dreamstale-lineal-dreamstale-15.png">
+                </span>
+                <ul class="sub_options">
+                    <li><a href="#">Learn C++</a></li>
+                    <li><a href="#">C++ STL</a></li>
+                    <li><a href="#">C Programs</a></li>
+                    <li><a href="#">Data Structures</a></li>
+                </ul>
+            </li>
+            <li class="options"><span>Courses</span></li>
+        </ul>
+    </navbar>
+
+    <!-- Main contain all details, courses card and many other stuffs -->
+    <!-- In this i have made two section left_main_container and right_main_container. -->
+
+    <main class="main_container">
+
+
+    <!-- In left_container we have courses card where u can see different courses with some summary -->
+
+        <div class="left_main_container">
+            <div id="courses-container">
+                <!-- here I am adding different cards from js file dynamically -->
+            </div>
+            <div class="pages_btn" id="pages-button">
+               <!-- here we are creating buttons dynamicaly depending on size of data -->
+            </div>
+        </div>
+
+
+    <!-- In right_main_container have many thisngs such as form where You can share your recent experiences, add blocks and you can see Recent Posts -->
+
+
+        <div class="right_main_container">
+            <div class="tips">
+                <div class="tips_title">Subscribe</div>
+                <div class="tips_desc">I want to receive latest posts and interview tips</div>
+                <div class="inpt">
+                    <labels>Name*</labels><br>
+                    <input type="text" placeholder="John">
+                </div>
+                <div class="inpt">
+                    <labels>Email*</labels><br>
+                    <input type="text" placeholder="abcd@gmai.com">
+                </div>
+                <div>
+                    <div class="join_button">
+                        <button>Join takeUforward</button>
+                    </div>
+                </div>
+                <div>
+                    <label>Search</label>
+                    <div class="search_input">
+                        <input type="text">
+                        <button>Search</button>
+                    </div>
+                </div>
+            </div>
+            <div class="advertisment">
+
+            </div>
+            <div class="recent_posts">
+                <div class="rec_heading">Recent Posts</div>
+                <div class="recent_topics">
+                    <div>Recursive Bubble Sort Algorithm</div>
+                    <div>Recursive Insertion Sort Algorithm</div>
+                    <div>Right rotate an array by D places
+                    </div>
+                    <div>Right rotate an array by D places
+                    </div>
+                    <div>Right rotate an array by D places
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        Copyright © 2023 takeuforward | All rights reserved
+    </footer>
+
+    <script src="Task1.js"></script>
+</body>
+
+</html>
