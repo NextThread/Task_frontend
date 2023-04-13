@@ -61,12 +61,14 @@ notification.alert {
 }
 
 /* This section of CSS is for navbar */
-.navbar_list{
+.expand_btn{
+    display:none;
+}
+.navbas_list{
     padding:2rem;
 }
 ul{
     display: flex;
-    /* flex-direction: row; */
     flex-wrap: wrap;
 }
 li{
@@ -289,3 +291,67 @@ footer{
     margin:2rem 0;
     font-family: 'Titillium Web', sans-serif;
 }
+
+
+
+@media only screen and (max-width: 480px) {
+  .header{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact_icons{
+    margin-top:1.5rem;
+  }
+  .main_container{
+    display:flex;
+    flex-direction:column;
+}
+.pages_btn button{
+    background-color: black;
+    color:white;
+    margin-right:0.3rem;
+    margin-top:1rem;
+    height:3rem;
+    width: 3rem;
+    font-size: 1.1rem;
+}
+.main_container{
+    padding-right: 0.5rem;
+}
+body{
+     padding:0 2rem;
+}
+.expand_btn{
+    display:block;
+}
+.navbas_list{
+    display: none;
+}
+li{
+    display:block;
+    padding-right:2rem;
+    padding-left:1rem;
+    font-size:17px;
+    line-height: 50px;
+    font-weight:20px;
+    font-family: 'Titillium Web', sans-serif;
+}
+ul{
+    background-color:black;
+    color:white;
+}
+
+}
+
+.expand_btn{
+    height:2rem;
+}
+.icon-dashed {
+    content: url('./img/3dashed.png');
+  }
+  
+  .icon-cross {
+    content: url('./img/cross.png');
+  }

@@ -282,5 +282,23 @@ const coursesData = [
     }
 ];
 
+// function handleNav(){
+//   const nav_list=document.getElementsByClassName('navbas_list')
+//   nav_list.style.display='block';
+// }
 
-
+function handleNav() {
+    const nav_list = document.getElementsByClassName('navbas_list')[0];
+    const icon = document.getElementsByClassName('expand_btn')[0];
+  
+    if (nav_list.style.display === 'block') {
+      nav_list.style.display = 'none';
+      icon.classList.remove('icon-cross');
+      icon.classList.add('icon-dashed');
+    } else {
+      nav_list.style.display = 'block';
+      icon.classList.remove('icon-dashed');
+      icon.classList.add('icon-cross');
+    }
+  }
+  
