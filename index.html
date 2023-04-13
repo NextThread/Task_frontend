@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/home.css">
+
+    <!-- for home aside styling -->
+    <link rel="stylesheet" href="./css/aside.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@700&family=Domine:wght@700&family=Golos+Text&display=swap');
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="top_div">
+
+        <div class="top_box">
+
+            <div class='top'>
+                <h4>Register For Codestudio Saturday Contest</h4>
+            </div>
+
+        </div>
+
+        <div class='main_app_block'>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class='app_box'>
+
+                <div class="social_box">
+
+                    <div class='social'>
+                        <div class='social_logo'>
+                            <h1><a href="#">takeUforward</a></h1>
+                            <p>- Strive for Excellence </p>
+                        </div>
+                        <div class='social_media_link'>
+                            <a href="#"><img src='./images/youtube.png' alt="social" /></a>
+                            <a href="#"><img src='./images//telegram.png' alt="social" /></a>
+                            <a href="#"><img src='./images//linkedin.png' alt="social" /></a>
+                            <a href="#"><img src='./images/instagram.png' alt="social" /></a>
+                            <a href="#"><img src='./images/twitter.png' alt="social" /></a>
+                            <a href="#"><img src='./images/facebook.png' alt="social" /></a>
+
+                        </div>
+                    </div>
+
+                    <hr style="opacity: '0.5' " />
+
+
+                </div>
+                <div class="navbar_box">
+
+                    <div class='navbar_line'> </div>
+
+                    <div class='navbar_menu'><i class='bi bi-list'></i>
+                        <p class="nav_text">Navigation</p>
+                    </div>
+
+                    <div class="navbar ">
+
+                        <p>Striver's SDE Sheet</p>
+                        <p>Striver's DSA Course/Sheet</p>
+                        <p>Striver's DP Series</p>
+
+                        <div class="nav1">
+                            <p class='cs_subj'>CS Subjects <i class="bi bi-chevron-down nav1_icon"></i></p>
+                            <div class='more_subj_1 more_subj'>
+                                <p>SDE Core Sheet</p>
+                                <hr />
+                                <p>Operating System</p>
+                                <hr />
+                                <p>Computer Networks</p>
+                            </div>
+                        </div>
+
+                        <div class="nav2">
+                            <p>Interview Prep <i class="bi bi-chevron-down nav2_icon"></i></p>
+                            <div class='more_subj_2 more_subj''>
+                                <p>Blind 75</p>
+                                <hr />
+                                <p>Striver Tree Series</p>
+                                <hr />
+                                <p>Striver's CP Sheet</p>
+                                <hr />
+                                <p>TCS NQT Coding Sheet</p>
+                                <hr />
+                                <p>Interview Experience</p>
+                                <hr />
+                                <p>Interview Prep Roadmap</p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="nav3">
+                            <p>Programming <i class="bi bi-chevron-down nav3_icon"></i> </p>
+                            <div class='more_subj_3 more_subj'>
+                                <p>Learn C++</p>
+                                <hr />
+                                <p>C++ STL</p>
+                                <hr />
+                                <p>C Programs</p>
+                                <hr />
+                                <p>Data Structure</p>
+
+                            </div>
+                        </div>
+
+                        <p> Courses</p>
+                    </div>
+
+                </div>
+
+                <div class="home_box_body">
+
+                    <div class="home_main">
+
+                        <div class="home_main_content">
+
+                            <div class="moving_page" id="remove_data">
+
+                            </div>
+
+                        </div>
+
+                        <div class="lowerbtn">
+                            <button onclick="previes_page()" id="prev_btn"><i
+                                    class="bi bi-chevron-double-left"></i></button>
+                            <button class="btn" onclick="changepage(0,10)" name="1" id="btn1">1</button>
+                            <button onclick="changepage(10,20)" name="2" id="btn2">2</button>
+                            <button onclick="changepage(20,30)" name="3" id="btn3">3</button>
+                            <button onclick="changepage(30,40)" name="4" id="btn4">4</button>
+                            <button onclick="next_page()" id="next_btn"><i
+                                    class="bi bi-chevron-double-right"></i></button>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+
+
+                    <div class="home_aside">
+
+                        <div class='aside'>
+
+                            <h2 class="aside_sub">Subscribe</h2>
+                            <p class='aside_para'>I want to receive latest posts and interview tips</p>
+                            <br />
+                            <div class="aside_form">
+                                <p>Name*</p>
+                                <input type="text" placeholder='john' />
+                                <br />
+                                <br />
+                                <p>Email*</p>
+                                <input type="email" placeholder='abc@gmail.com' />
+                                <button class='aside_btn'>Join takeUforward</button>
+                            </div>
+                            <br />
+                            <br />
+                        <br>
+
+                            <div class="aside_search">
+                                <p>Search</p>
+                                <div class='aside_search_btn'>
+                                    <input type="text" />
+                                    <button>Search</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <br>
+                        <br>
+
+                        <div class="aside2">
+                            <h1>Recent Posts</h1>
+                            <br />
+                            <p>Recursive Bubble Sort Algorithm</p>
+                            <p>Recursive Insertion Sort Algorithm</p>
+                            <p>Right rotate an array by D places</p>
+                            <p>Left rotate an array by D places</p>
+                            <p>Find the missing number in an array</p>
+                        </div>
+                        <br>
+                        <br>
+
+                        <div class="aside3">
+                            <p>
+                                Accolite Digital <b class='aside3_bold2'>Amazon</b> Arcesium Bank of America
+                                Barclays BFS <b class='aside3_bold3'>Binary Search Binary Search Tree</b> Commvault
+                                CPP DE Shaw DFS <b class='aside3_bold1'>DSA Self Paced</b> google HackerEarth
+                                Hashing infosys inorder <b class='aside3_bold3'>Interview Experience Java </b>
+                                Juspay Kreeti Technologies Morgan Stanley Newfold Digital Oracle post order queue
+                                recursion Samsung SDE Core <b class='aside3_bold2'>Sheet SDE </b> Sheet Searching
+                                set-bits sorting <b class='aside3_bold2'>Strivers A2ZDSA Course</b> sub-array
+                                subarray Swiggy takeuforward <b class='aside3_bold3'>TCS TCS CODEVITA TCS </b> Ninja
+                                <b class='aside3_bold2'>TCS NQT</b> VMware XOR
+                            </p>
+                        </div>
+                        <br />
+                        <br />
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <hr>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <center class="copyright">Copyright © 2023 takeuforward | All rights reserved</center>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+        </div>
+
+
+    </div>
+    <script src="./dataset/dataset.js"></script>
+
+    <script src="./javascript/indexjs.js"></script>
+
+</body>
+
+</html>

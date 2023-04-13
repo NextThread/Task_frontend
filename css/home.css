@@ -1,0 +1,123 @@
+.home_box_body {
+    display: grid;
+    grid-template-columns: 1.45fr .55fr;
+    background-color: white;
+
+}
+
+.home_main {
+    margin-top: 10px;
+    font-family: "Titillium Web", arial, helvetica, sans-serif;
+}
+
+
+.data {
+    width: 100%;
+    padding-right: 20px;
+    margin-bottom: 50px;
+    line-height: 30px;
+    color: #303030;
+}
+
+.data_date {
+    margin-bottom: 10px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+.data_date i{
+    font-size: 4px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.data_heading {
+    font-family: "Amaranth", arial, helvetica, sans-serif;;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #303030;
+    cursor: pointer;
+
+}
+.data_heading:hover {
+text-decoration: underline;
+}
+
+.data_para {
+    margin-bottom: 10px;
+    color: #303030;
+
+}
+.data_button button{
+    background-color: #EE4B2B;
+    padding: 6px;
+    font-size: 15px;
+    color: white;
+    width: 145px;
+    height: 38px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    cursor: pointer;
+
+}
+.data_button button:hover{
+    background-color: #303030;
+}
+.data_button button i{
+    font-size: 9px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+.lowerbtn{
+    background-color: white;
+    height: 50px;
+}
+.lowerbtn button {
+    background-color: #303030;
+    color: white;
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    border: none;
+}
+.lowerbtn button:hover{
+    background-color: #1ebdb8;
+
+}
+
+
+
+.lowerbtn{
+    display: flex;
+}
+.lowerbtn button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.copyright{
+    font-size: 18px;
+}
+
+
+
+
+
+@media only screen and (max-width:950px){
+    .home_box_body{
+        display: flex;
+        flex-direction: column;
+    }
+    .data {
+        padding-right: 0px;
+    }
+    .data_heading {
+        font-size: 12px;
+    
+    }
+}
+
