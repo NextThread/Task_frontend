@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TakeUForward</title>
+    <link rel="icon" href="data:image/png;base64,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">
+    <link rel="stylesheet" href="take.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body> 
+  <!-- header part starts -->
+
+   <div class="stick">
+         <a href="http://bit.ly/3U9qj7q" target="blank">Register for Codestudio Saturday Contest</a>
+      </div>  
+    <div class="heads">
+        <div class="text">   
+            <h1 class="sub" style="margin:0px;border: 0px;padding-left:20px;padding-top: 30px;">takeUforward</h1>
+            <p style="border:0px;margin:0px;font-size:15px;padding-left: 20px;">~ Strive for Excellence</p>
+        </div> 
+           <div class="icon">
+             <a href="https://www.youtube.com/channel/UCJskGeByzRRSvmOyZOz61ig"><i style="height:20px;width:23px;border-radius:50%;background: #FF0000;margin-right:5px;" class="fa fa-youtube-play" ></i></a>
+             <a href="https://wa.me/?text=Hi,I%20have%20found%20the%20best%20free%20resource%20to%20prepare%20for%20product%20companies%20-%20Amazon,%20Microsoft%20etc%20interview.Check%20out%20Striver%27s%20SDE%20Sheet:%20https://bit.ly/3zquqSuEverything%20you%20need%20for%20structured%20interview%20prep%20for%20free."><i style="height:20px;width:23px;border-radius:50%;background: #0088cc;margin-right:5px;" class="fa fa-telegram" ></i></a>
+             <a href="https://www.linkedin.com/company/takeuforward/?originalSubdomain=in"><i style="height:20px;width:23px;border-radius:50%;background: #0072B1;margin-right:5px;" class="fa fa-linkedin-square" ></i></a>
+             <a href="https://www.instagram.com/striver_79/"><i style="height:20px;width:23px;border-radius:50%;background: #d62976;margin-right:5px;" class="fa fa-instagram" ></i></a>
+             <a href="https://bits.ly/32QbLD6"><i style="height:20px;width:23px;border-radius:50%;background: #00acee;margin-right:5px;" class="fa fa-twitter" ></i></a>
+             <a href="https://bits.ly/3mJHMDY"><i style="height:20px;width:23px;border-radius:50%;background: #1877F2;margin-right:5px;" class="fa fa-facebook-official"></i></a>
+           </div>
+    </div>
+        <hr style="margin-top:70px;">
+     <!-- header part stops -->
+
+
+      <!-- navbar starts -->
+   <main>
+    <div class="navbar">
+        <a href="#Striver's SDE Sheet">Striver's SDE Sheet</a>
+        <a href="#Striver's A2Z DSA Course/Sheet">Striver's A2Z DSA Course/Sheet</a>
+        <a href="#Striver's DP Series">Striver's DP Series</a>
+        <div class="dropdown">
+          <button class="dropbtn">CS Subjects
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">SDE Core Sheet</a>
+            <a href="#">Operating Systems</a>
+            <a href="#">Computer Networks</a>
+          </div>
+        </div> 
+        <div class="dropdown">
+            <button class="dropbtn">Interview Prep
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Blind 75</a>
+              <a href="#">Striver Tree Series</a>
+              <a href="#">Striver's CP Sheet</a>
+              <a href="#">TCS NQT Coding Sheet</a>
+              <a href="#">Interview Experience</a>
+              <a href="#">Interview Prep Roadmap</a>
+            </div>
+          </div> 
+          <div class="dropdown">
+            <button class="dropbtn">Programming
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Learn C++</a>
+              <a href="#">C++ STL</a>
+              <a href="#">C programs</a>
+              <a href="#">Data Structure</a>
+            </div>
+          </div> 
+          <a href="#Courses">Courses</a>
+      </div>
+
+    <!-- navbar stops -->
+
+    <!-- right side body starts -->
+    <article class="articles">
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">October 5,2022</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/">Interviews</a>
+            </span>
+          </div>
+        <p class="hov" >Striver's SDE Sheet-Top Coding Interview Problems</p>
+        <p style="color:rgb(90, 87, 87)"> Check out the Most Asked Coding Interview Problem list compiled by Raja Vikramaditya AKA Striver.The sheet is popularly Known<br><br> as "Striver's SDE Sheet".</p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+        </header>
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">June 20,2022</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/">Strivers A2ZDSA Course</a>
+            </span>
+          </div>
+        <p class="hov">Strivers A2Z DSA Course/Sheet</p>
+        <p style="color:rgb(90, 87, 87)"> The coure is made for people who want to learn DSA from A to Z for FREE from of the best Mentors.</p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+        </header>
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">April 9,2022</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/">Interviews/Roadmaps</a>
+            </span>
+          </div>
+        <p class="hov">Most trusted 90 days roadmap to placement-Guaranted</p>
+        <p style="color:rgb(90, 87, 87)"> This roadmap is aimed at helping entry-level software engineering jobs aspirants at top product-based companies and <br><br>Startups. NOte:Please</p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+        </header>
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">January 11,2022</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/">Interviews</a>
+            </span>
+          </div>
+        <p class="hov">MUST-DO Questions for[DBMS,CN,OS] Interviews:SDE Core Sheet</p>
+        <p style="color:rgb(90, 87, 87)">Sheet for the sole purpose of quick revision and preparation in less time. Made with love by takeUforward!.</p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+        </header>
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">January 11,2022</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/">Striver’s Tree Series : Tree Data Structure</a>
+            </span>
+          </div>
+        <p class="hov">Striver’s Tree Series : Tree Data Structure</p>
+        <p style="color:rgb(90, 87, 87)">In this post we will check “Striver’s Tree Series : Tree Data Structure”. What is a tree data structure? </p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+        </header>
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">January 11,2022</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/">Binary Tree/Data Structure</a>
+            </span>
+          </div>
+        <p class="hov">Striver's Tree Series: Tree Data Structure</p>
+        <p style="color:rgb(90, 87, 87)">In this post we will check "Striver's Tree Series:Tress Data Structure".What is a tree data structure?</p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+        </header>
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">January 11,2022</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/">Interviews</a>
+            </span>
+          </div>
+        <p class="hov">TCS NQT Coding Sheet – TCS Coding Questions.</p>
+        <p style="color:rgb(90, 87, 87)">This post contains all popular and most frequent coding questions asked in the TCS NQT test and other similar tests</p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+        </header>
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">October 12,2021</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/">Interviews</a>
+            </span>
+          </div>
+        <p class="hov">Paid Work from Home Intership at takeUforward!</p>
+        <p style="color:rgb(90, 87, 87)">Hello Fam! Thanks for being a part of the community. We have 50 openings for paid work from home internships</p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+        </header>
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">March 22,2022</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/"> Arrays/Sorting</a>
+            </span>
+          </div>
+        <p class="hov">Recursive Bubble Sort Algorithm </p>
+        <p style="color:rgb(90, 87, 87)">Problem Statement: Given an array of N integers, write a program to implement the Recursive Bubble Sort algorithm.</p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+        </header>
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">March 22,2023</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/"> Arrays/Sorting</a>
+            </span>
+          </div>
+        <p class="hov">Recursive Insertion Sort Algorithm </p>
+        <p style="color:rgb(90, 87, 87)">Problem Statement: Given an array of N integers, write a program to implement the Recursive Insertion Sort algorithm.</p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+        </header>
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">March 22,2023</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/"> Arrays</a>
+            </span>
+          </div>
+        <p class="hov">Right rotate an array by D places</p>
+        <p style="color:rgb(90, 87, 87)">Problem Statement: Given an array of N integers and an integer D, right rotate the array by D place</p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+        </header>
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">March 22,2023</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/"> Arrays</a>
+            </span>
+          </div>
+        <p class="hov">Left rotate an array by D places</p>
+        <p style="color:rgb(90, 87, 87)">Problem Statement: Given an array of N integers and an integer D,left rotate the array by D place</p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+        </header>
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">March 22,2023</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/"> Arrays</a>
+            </span>
+          </div>
+        <p class="hov">Find the missing number in an array</p>
+        <p style="color:rgb(90, 87, 87)">Problem Statement: Given an integer N and an array of size N-1 containing N-1 numbers between 1 to N</p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+        </header>
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">March 22,2023</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/"> Arrays</a>
+            </span>
+          </div>
+        <p class="hov">Find the number that appears once, and the other numbers twice</p>
+        <p style="color:rgb(90, 87, 87)">Problem Statement: Given a non-empty array of integers arr, every element appears twice except for one. Find that single one.</p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+        </header>
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">March 22,2023</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/">Binary Tree</a>
+            </span>
+          </div>
+        <p class="hov">Introduction to Trees</p>
+        <p style="color:rgb(90, 87, 87)">A Tree is a hierarchical data structure that is different from linear data structures like arrays, linked lists, stacks.</p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+        </header>
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">March 20,2023</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/">  Uncategorized</a>
+            </span>
+          </div>
+        <p class="hov">21-Day Beginner Coding Challenge By Code Studio</p>
+        <p style="color:rgb(90, 87, 87)"> It usually takes 21 days to develop a habit. Here at Code Studio by Coding Ninjas.</p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+        </header>
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">March 14,2023</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/"> Arrays / Strivers A2Z DSA Course/Sheet / Strivers A2ZDSA Course</a>
+            </span>
+          </div>
+        <p class="hov">Linear Search Algorithm</p>
+        <p style="color:rgb(90, 87, 87)"> Problem Statement: Given an array, and an element num the task is to find if num is present in the given.</p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+        </header>
+        <header class="art">
+          <div class="sub-art">
+            <span >
+              <a class="dates" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/">March 8,2023</a>
+            </span>
+            <span >
+              <a class="dates" style="padding-left: 10px;" href="https://takeuforward.org/category/interviews/"> Interview Experience / Interviews</a>
+            </span>
+          </div>
+        <p class="hov">Pinelabs Interview Experience: SDE: Set 1</p>
+        <p style="color:rgb(90, 87, 87)">Company Name: Pinelabs Job Role: SDE Years of Experience Required:  2.5 Years Drive: Off-Campus (Referral) Preparation for<br><br> Pinelabs Topics: Data Structures</p>
+        <button style="background-color: orangered;height:40px;border: none;color: white;font-size: medium;">Continue reading >></button>
+       </header> 
+    </article> 
+
+     <!-- right side body ends  -->
+
+
+      <!-- left side body starts -->
+      <aside class="asides">
+        <h3 style="font-weight: bolder;">Subscribe</h3>
+        <p> I want to recieve latest posts and interview <br><br>tips</p><br>
+         <label>
+          Name<span style="color:red">*</span>
+          <input style="display: block;padding: 10px 10px;margin-top: 10px;" type="text"  placeholder="Name">
+         </label>
+         <br>
+         <label>
+          Email<span style="color:red">*</span>
+          <input style="display: block;padding: 10px 10px;margin-top: 10px;" type="email"  placeholder="abc@gmail.com">
+         </label><br>
+         <button style="background-color: orangered;height:40px;border: none;color: white;font-size: large;">Join takeUforward</button>
+         <br><br>        
+         <label>
+          <span style="display:block;margin-top: 30px;">Search</span>
+          <span>
+          <input style="padding: 10px 10px;margin-top: 10px;" type="email">
+          </span>
+          <span>
+           <button style="padding: 10px 10px;margin-top: 10px;">Search</button>
+          </span>
+         </label>   
+        
+         <label>
+          <h1 class="rec">Recent Posts</h1>
+         <div class="recent">
+          <p>Recursive Bubble Sort Algorithm </p>
+          <p>Recursive Insertion Sort ALgorithm</p>
+          <p>Right rotate an array by D places</p>
+          <p>Left rotate an array by D places</p>
+          <p>Find the missing number in an array</p>
+        </div>
+        <div class="recent1">
+          <a href="https://takeuforward.org/tag/arcesium/">Accolite Digital <span style="font-size: large;font-weight:bolder" >Amazon</span> Arcesium Bank of America Barclays </a><br><br>
+          <a href="https://takeuforward.org/tag/arcesium/"><span style="font-size:8px">BFS</span><span style="font-size:10px">Binary Search</span> Binary Search Tree Commvault CPP DE </a><br><br>
+          <a href="https://takeuforward.org/tag/arcesium/">Shaw DFS<span style="font-size:large;font-weight:bolder">DSA Self Paced</span> google </a><br><br>
+          <a href="https://takeuforward.org/tag/arcesium/">HackerEarth Hashing infosys inorder Interview Experience Java </a><br><br>
+          <a href="https://takeuforward.org/tag/arcesium/">Juspay Kreeti Technologies Morgan Stanley Newfold Digital  </a><br><br>
+          <a href="https://takeuforward.org/tag/arcesium/">Oracle post order queue recursion Samsung SDE Core Sheet <span style="font-size:large;font-weight:bolder">SDE</span></a><br><br>
+          <a href="https://takeuforward.org/tag/arcesium/"><span style="font-size:large;font-weight:bolder">Sheet</span> Searching set-bits sorting <span style="font-size: large;font-weight:bolder">Strivers</span></a><br><br>
+          <a href="https://takeuforward.org/tag/arcesium/"><span style="font-size:large;font-weight:bolder">A2ZDSA Course</span> sub-array subarray Swiggy </a><br><br>
+          <a href="https://takeuforward.org/tag/arcesium/">takeuforward <span style="font-size:8px">TCS TCS CODEVITA TCS Ninja</span><span style="font-size:large;font-weight:bolder">TCS NQT</span></a><br><br>
+          <a href="https://takeuforward.org/tag/arcesium/">VMware XOR</a>
+        </div>
+         </label>
+        </aside>
+      </main>
+    <!-- left side body ends -->
+
+    <!-- footer starts -->
+     <footer>
+      <hr>
+      <p class="copy">Copyright<i class="fa fa-copyright"></i> 2023 takeforward | All rights reserved</p>
+     </footer>
+
+
+
+</body>
+</html>
