@@ -139,11 +139,11 @@ function toogle_btn_display() {
 
     }
 
-  
+
 
 }
 
-// move page to yop 
+// move page to top
 const scrollToTop = () => {
     window.scrollTo({
         top: 0,
@@ -162,11 +162,6 @@ const scrollToTop = () => {
 function addData(initial_value, final_value) {
 
     let add = document.getElementsByClassName('moving_page')[0]
-
-
-    console.log('add data is running')
-    console.log(initial_value)
-    console.log(final_value)
 
 
     for (list of homedata.slice(initial_value, final_value)) {
@@ -190,3 +185,80 @@ function addData(initial_value, final_value) {
 }
 
 addData(0, 10)
+
+
+
+
+
+
+
+
+// for searching and showing data to user
+
+let a = homedata.map(list => list.heading.split('').filter(value => value !== '-' && value !== '/' && value !== ':' && value !== '|' && value !== `'` && value !== `"`).join(''))
+
+let user_inter = ''
+function input_value(event) {
+    user_inter = event.target.value
+}
+
+function fun(event) {
+
+    if (user_inter === '') {
+
+    } else {
+
+        let input=user_inter.split(' ')
+
+
+        user_inter=input[0]
+
+
+        let checker = []
+
+        for (value in a) {
+
+            if (a[value].split(' ').filter(word => word.toLowerCase() === user_inter).length !== 0) {
+
+                checker.push(value)
+            } else {
+
+            }
+
+        }
+
+        if (checker.length === 0) {
+
+            alert('Content not found')
+
+        } else {
+
+            add.innerHTML = ''
+
+            for (value in a) {
+
+                if (a[value].split(' ').filter(word => word.toLowerCase() === user_inter).length !== 0) {
+
+                    add.insertAdjacentHTML('afterbegin', `<div class='data'>
+    
+                    <div class='data_date'>${homedata[value].date} <i class="bi bi-square-fill"></i>  ${homedata[value].value}</div>
+                    
+                    <div class='data_heading'><h1>${homedata[value].heading}</h1></div>
+                    
+                    <div class='data_para'><p>${homedata[value].para}</p></div>
+                    
+                    <div class="data_button">
+                        <button>Continue reading <i class="bi bi-chevron-double-right"></i></button>
+                    </div>
+                    
+                    </div>`)
+                }
+
+                scrollToTop()
+            }
+
+        }
+
+    }
+
+}

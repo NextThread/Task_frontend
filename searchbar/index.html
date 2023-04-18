@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>searchbar</title>
+    <style>
+        input {
+            position: absolute;
+            width: 500px;
+            height: 47px;
+            border-radius: 4px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border: none;
+            outline: none;
+            /* margin: auto; */
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding-left: 10px;
+            font-size: 1.1rem;
+            color: rgb(85, 83, 83);
+        }
+
+        .item {
+            position: absolute;
+            width: 500px;
+            height: 300px;
+            border: 1px solid;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search">
+        <input type="text" placeholder="Search..." onchange="searching(event)">
+        <div class="item" id="items">
+
+        </div>
+
+    </div>
+
+
+
+
+    <script src="./dataset.js"></script>
+    <script>
+
+        let div = document.getElementById('items')
+
+
+        console.log(homedata)
+
+        function searching(event) {
+            let search = event.target.value
+
+            let data = homedata.filter((item) => {
+                // search && item.split(' / ').filter((value)=>
+            })
+            div.innerHTML = `${event.target.value}`
+
+        }
+
+        let array = []
+        for (let i = 0; i <= homedata.length - 1; i++) {
+            array.push(homedata[i].heading.split('/').map(value=>value.split(' ').map(value=>value.toLowerCase())))
+        }
+        console.log(array)
+
+
+
+    //    let output= a.split('/').map(value=>value.split(' ').map(value=>value.toLowerCase()))
+    //    let empty=[]
+    //    for(value of output){
+    //     empty.push(...value)
+    //    }
+    //    console.log(empty)
+    </script>
+</body>
+
+</html>
