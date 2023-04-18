@@ -1,0 +1,107 @@
+.aside{
+    font-family: "Titillium Web", arial, helvetica, sans-serif;
+    color: #303030;
+
+}
+
+.aside_sub{
+    font-family: 'Amaranth', sans-serif;
+    font-size: 20px;
+    margin-bottom: 13px;
+}
+.aside_form input{
+height: 45px;
+width: 80%;
+padding-left: 10px;
+font-size: 20px;
+}
+.aside_btn{
+    cursor: pointer;
+    display: block;
+    margin-top: 15px;
+    width: 160px;
+    height: 48px;
+    background-color: #EE4B2B;
+    color: white;
+    border: none;
+    font-size: 16px;
+
+} 
+.aside_search_btn{
+    display: flex;
+}
+.aside_search_btn input{
+    height: 45px;
+width: 70%;
+}
+.aside_search_btn button{
+    cursor: pointer;
+    height: 45px;
+    margin-left: 10px;
+    width: 70px;
+    font-size: 16px;
+
+
+}
+@media only screen and (max-width:900px){
+    .aside_search_btn{
+        justify-content: space-between;
+    }
+    .aside_search_btn input{
+        height: 45px;
+    width: 90%;
+    }
+    .aside_form input{
+        width: 100%;
+    }
+}
+
+
+
+
+/* par2  */
+.aside2 {
+    font-family: "Titillium Web", arial, helvetica, sans-serif;
+    margin-top: 40px;
+    color: #303030;
+
+}
+
+.aside2 p {
+    color: #EE4B2B;
+    font-size: 16px;
+    /* line-height: 15px; */
+    margin-bottom: 15px;
+    cursor: pointer;
+    letter-spacing: .5px;
+}
+.aside2 h1{
+    font-size: 29px;
+}
+
+/* part3 */
+.aside3{
+    font-family: "Titillium Web", arial, helvetica, sans-serif;
+    color: #EE4B2B;
+    margin-top: 50px;
+    padding-right: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 40px;
+
+}
+.aside3_bold1{
+    font-size: 30px;
+    font-weight: 200;
+}
+.aside3_bold2{
+font-size: 25px;
+}
+.aside3_bold3{
+font-size: 15px;
+}
+@media only screen and (max-width:950px){
+    .aside3{
+        padding-right: 0px;
+    }
+}

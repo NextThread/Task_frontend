@@ -1,0 +1,94 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+        /* @import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@700&family=Domine:wght@700&family=Golos+Text&display=swap'); */
+
+
+
+
+body {
+    background-color: #303030;
+}
+
+.main_app_block{
+    max-width: 1500px;
+    /* height: 1700px; */
+    height: fit-content;
+    background-color: white;
+    margin: auto;
+}
+
+
+
+.top {
+    /* border: 1px solid black; */
+    padding: 14px;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    color: red;
+    background-color: white;
+    z-index: 2;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    font-family: "Titillium Web", arial, helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.app_box{
+    width: 88%;
+    margin: auto;
+}
+
+
+
+
+/* social block  */
+.social{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+.social_logo h1{
+    font-size: 43px;
+    font-family: 'Amaranth', sans-serif;
+    /* text-decoration: none; */
+
+}
+
+.social_logo p{
+    font-family: "Titillium Web", arial, helvetica, sans-serif;
+    color: #303030;
+    font-size: 17px;
+
+    margin-top: 15px;
+
+}
+.social_logo h1 a{
+    text-decoration: none;
+    color: rgb(39, 38, 38);
+    opacity: 0.95;
+}
+.social_logo h1 a:hover{
+    text-decoration: underline;
+}
+
+.social_media_link a img{
+    width: 35px;
+    margin: 1px;
+
+}
+
+@media only screen and (max-width:900px){
+    .social{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .social_logo{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
