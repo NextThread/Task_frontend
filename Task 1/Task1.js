@@ -65,7 +65,6 @@ searchInput.addEventListener('input', function () {
     // Get the input value
     const inputValue = searchInput.value;
     // Display the input value on the console
-    console.log('Input value: ', inputValue);
     if(inputValue.length!==0)
     {
         handleSearch(0,inputValue);
@@ -84,6 +83,8 @@ function handleSearch(val, keyword) {
         // You can customize the filtering logic here based on your requirements
         // For example, you can check if the keyword is present in the course title or description
         return course.title.toLowerCase().includes(keyword.toLowerCase()) ||
+               course.time.toLowerCase().includes(keyword.toLowerCase())||
+               course.topic.toLowerCase().includes(keyword.toLowerCase())||
                course.description.toLowerCase().includes(keyword.toLowerCase());
     });
 
