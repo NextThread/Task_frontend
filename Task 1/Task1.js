@@ -17,14 +17,13 @@ function generateCourseHTML(time, topic, title, description) {
 
 // This function generates the Button which can be used multiple times
 function generateButton(val) {
-    if(val==='<<'||val==='>>')
-    {
+    if (val === '<<' || val === '>>') {
         return `
         <button>${val}</button>
         `;
     }
     return `
-    <button id="button-${val}" onClick="handleClick(${val})">${val+1}</button>
+    <button id="button-${val}" onClick="handleClick(${val})">${val + 1}</button>
     `;
 }
 
@@ -35,11 +34,73 @@ const btn_container = document.getElementById('pages-button');
 const coursesContainer = document.getElementById('courses-container');
 
 
+
+// this function is used to display courses based on the filtered data
+function displayCourses(val) {
+    coursesContainer.innerHTML = '';
+    for (let i = val * 10; i < val * 10 + 10 && i < filteredCoursesData.length; i++) {
+        const course = filteredCoursesData[i];
+        const courseHTML = generateCourseHTML(course.time, course.topic, course.title, course.description);
+        coursesContainer.innerHTML += courseHTML;
+    }
+
+    const buttons = document.querySelectorAll('button[id^="button-"]');
+    buttons.forEach(button => {
+        button.style.backgroundColor = "";
+    });
+
+    const buttonCol = document.getElementById(`button-${val}`);
+    if (buttonCol) {
+        buttonCol.style.backgroundColor = "red";
+    }
+}
+
+
+// Get the input and button elements
+const searchInput = document.querySelector('.search-input');
+const searchButton = document.querySelector('.search-button');
+
+// Add event listener to the search button
+searchInput.addEventListener('input', function () {
+    // Get the input value
+    const inputValue = searchInput.value;
+    // Display the input value on the console
+    console.log('Input value: ', inputValue);
+    if(inputValue.length!==0)
+    {
+        handleSearch(0,inputValue);
+        btn_container.innerHTML = '';
+    }
+    else{
+        buttonAppear();
+    }
+});
+
+function handleSearch(val, keyword) {
+    coursesContainer.innerHTML = '';
+
+    // Filter coursesData array based on keyword
+    const filteredCourses = coursesData.filter(course => {
+        // You can customize the filtering logic here based on your requirements
+        // For example, you can check if the keyword is present in the course title or description
+        return course.title.toLowerCase().includes(keyword.toLowerCase()) ||
+               course.description.toLowerCase().includes(keyword.toLowerCase());
+    });
+
+    for (let i = val * 10; i < (val * 10) + 10 && i < filteredCourses.length; i++) {
+        const course = filteredCourses[i];
+        const courseHTML = generateCourseHTML(course.time, course.topic, course.title, course.description);
+        coursesContainer.innerHTML += courseHTML;
+    }
+}
+
+
+
 // according to the array length of data we are display components
 function buttonAppear() {
     const no = Math.floor(coursesData.length / 10);
     btn_container.innerHTML += generateButton('<<')
-    for (let i = 0; i < no+1; i++) {
+    for (let i = 0; i < no + 1; i++) {
         btn_container.innerHTML += generateButton(i);
     }
     btn_container.innerHTML += generateButton('>>');
@@ -48,9 +109,9 @@ function buttonAppear() {
 
 //this is function is used to courses in the form card at one time only 10 data will appear after clicking on next page another 10 courses will appear
 function handleClick(val) {
-    
+
     coursesContainer.innerHTML = '';
-    for (let i = (val)* 10; i < ((val*10)+ 10)&& i < coursesData.length; i++) {
+    for (let i = (val) * 10; i < ((val * 10) + 10) && i < coursesData.length; i++) {
         const course = coursesData[i];
         const courseHTML = generateCourseHTML(course.time, course.topic, course.title, course.description);
         coursesContainer.innerHTML += courseHTML;
@@ -58,7 +119,7 @@ function handleClick(val) {
 
     const buttons = document.querySelectorAll('button[id^="button-"]');
     buttons.forEach(button => {
-      button.style.backgroundColor = "";
+        button.style.backgroundColor = "";
     });
 
     const buttonCol = document.getElementById(`button-${val}`);
@@ -72,6 +133,28 @@ window.onload = function () {
     handleClick(0);
     buttonAppear();
 }
+
+
+// function handleNav(){
+//   const nav_list=document.getElementsByClassName('navbas_list')
+//   nav_list.style.display='block';
+// }
+
+function handleNav() {
+    const nav_list = document.getElementsByClassName('navbas_list')[0];
+    const icon = document.getElementsByClassName('expand_btn')[0];
+
+    if (nav_list.style.display === 'block') {
+        nav_list.style.display = 'none';
+        icon.classList.remove('icon-cross');
+        icon.classList.add('icon-dashed');
+    } else {
+        nav_list.style.display = 'block';
+        icon.classList.remove('icon-dashed');
+        icon.classList.add('icon-cross');
+    }
+}
+
 
 // Here is all data we are passing in function
 // Here is all dummy data
@@ -282,23 +365,4 @@ const coursesData = [
     }
 ];
 
-// function handleNav(){
-//   const nav_list=document.getElementsByClassName('navbas_list')
-//   nav_list.style.display='block';
-// }
 
-function handleNav() {
-    const nav_list = document.getElementsByClassName('navbas_list')[0];
-    const icon = document.getElementsByClassName('expand_btn')[0];
-  
-    if (nav_list.style.display === 'block') {
-      nav_list.style.display = 'none';
-      icon.classList.remove('icon-cross');
-      icon.classList.add('icon-dashed');
-    } else {
-      nav_list.style.display = 'block';
-      icon.classList.remove('icon-dashed');
-      icon.classList.add('icon-cross');
-    }
-  }
-  
