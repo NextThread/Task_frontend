@@ -1,0 +1,357 @@
+
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+     padding:0 4rem;
+}
+
+/* Css for notification section */
+.notification{
+    background-color: white;
+    text-align: center;
+    color:#ff2e04;
+    font-weight:bolder;
+    font-family: 'Titillium Web', sans-serif;
+    font-size:1.1rem;
+    padding:2px 0;
+    margin-bottom:3rem;
+    box-shadow: 0px 3px 5px rgb(174, 173, 173);
+}
+notification.alert {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+/* This section of css is for header where website name , author name and all social media icons */
+.header{
+    display:flex;
+    padding-bottom: 3rem;
+    flex-direction:row;
+    justify-content:space-between;
+    border-bottom: 1px solid #a1a1a1;
+}
+.heading{
+    color:#303030;
+    font-size:2.75rem;
+    font-weight:bolder;
+    font-family: 'Amaranth', sans-serif;
+}
+.writer{
+    font-size:1.2rem;
+    color:#303030;
+    font-family: 'Titillium Web', sans-serif;
+}
+.contact_icons{
+    display:flex;
+    flex-direction:row;
+}
+.contact_icons img:hover{
+    height:2.4rem;
+}
+.icons{
+    width:2.6rem;
+    height:2.6rem;
+}
+.icons img{
+    height:2.2rem;
+}
+
+/* This section of CSS is for navbar */
+.expand_btn{
+    display:none;
+}
+.navbas_list{
+    padding:2rem;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+li{
+    display: inline;
+    padding-right:2rem;
+    padding-left:1rem;
+    font-size:17px;
+    line-height: 50px;
+    font-weight:20px;
+    font-family: 'Titillium Web', sans-serif;
+}
+#sub_options {
+    position: relative;
+  }
+  
+  .sub_options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    width:200px;
+    /* min-width: 100%; */
+    background-color: black;
+    padding:0 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .options:hover .sub_options {
+    opacity: 1;
+  }
+  .options :hover{
+    color:#a1a1a1;
+  }
+
+  .sub_options li{
+    position: relative;
+    width:100%;
+    border-bottom: 1px solid rgba(185, 184, 184, 0.393);
+  }
+  #sub_options img{
+    padding-left:0.5rem;
+    height:10px;
+  }
+  .sub_options li a{
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+    font-family: 'Titillium Web', sans-serif;
+  }
+
+
+/* main CSS is here */
+main{
+    border-bottom:1px solid #a1a1a1 ;
+    padding-bottom: 7em;
+}
+.main_container{
+    display:flex;
+    flex-direction: row;
+    padding-right:2rem;
+}
+.left_main_container{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    /* height:100px; */
+    width:70vw;
+    margin-right: 0.75rem;
+}
+.right_main_container{
+    position: relative;
+    width:30vw;
+    margin-left: 0.75rem;
+    padding:0 1rem;
+    padding-top:2rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+.courses{
+    display:grid;
+    /* flex-direction: column; */
+    grid-row-gap: 0.2rem;
+    margin: 2rem 0;
+}
+
+.courses_info{
+    display:flex;
+    flex-direction: row;
+    color: #898585;
+    font-size:0.9rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+.time{
+    margin-right:1.5rem;
+}
+.time:hover{
+    color: #555353;
+}
+.related_topic:hover{
+    color: #555353;
+}
+.courses_title:hover{
+    text-decoration: underline;
+}
+.courses_title{
+    color:rgb(5, 5, 5);
+    font-size:1.6rem;
+    font-weight:bolder;
+    padding:0.3rem 0;
+    font-family: 'Amaranth', sans-serif;
+    
+}
+.courses_description{
+    color:#303030;
+    font-size:1.1rem;
+    font-family: 'Titillium Web', sans-serif;
+}
+.courses_button button{
+    padding:0.5rem;
+    font-size:0.9rem;
+    background-color: #EE4B2B;
+    color:white;
+    border:none;
+    font-family: 'Titillium Web', sans-serif;
+}
+.courses_button button:hover{
+    background-color:rgb(96, 95, 95);
+}
+
+/* This section of css is for right side boxex where Tips box and add section is added  */
+.tips{
+    display:grid;
+    grid-row-gap: 1.2rem;
+    color:#303030;
+    font-size:17px;
+    margin-bottom: 8rem;
+}
+.tips_title{
+    color:rgb(5, 5, 5);
+    font-size:1.2rem;
+    font-weight:bolder;
+    padding:0.3rem 0;
+    font-family: 'Chivo Mono', monospace;
+}
+.join_button button{
+    font-size:1.2rem;
+    padding:0.5rem;
+    background-color: #EE4B2B;
+    color:white;
+    border:none;
+}
+.search_input input{
+    border:1px solid #7c7c7c;
+    height:2.5rem;
+    width:13rem;
+}
+.search_input button{
+    border:1px solid #7c7c7c;
+    height:2.5rem;
+    width:4rem;
+}
+.inpt input{
+    border:1px solid #7c7c7c;
+    height:2.5rem;
+    width:13rem;
+    padding:0 1rem;
+}
+
+.advertisment{
+    position:relative;
+    height:70vh;
+    width:auto;
+    background-color:rgb(160, 157, 157);
+    margin-bottom: 8rem;
+}
+
+
+/* CSS for recent posts */
+.recent_posts{
+    display: grid;
+    grid-gap: 2.5rem;
+}
+.rec_heading{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.recent_topics{
+    display: grid;
+    grid-row-gap: 1rem;
+    color:#EE4B2B;
+    font-size: 1.2rem;
+}
+.pages_btn{
+    
+    display:flex;
+    flex-direction: row;
+    /* justify-content: center; */
+}
+.pages_btn button{
+    background-color: black;
+    color:white;
+    margin-right:2rem;
+    margin-top:1rem;
+    height:3rem;
+    width: 3rem;
+    font-size: 1.1rem;
+}
+.pages_btn button:hover{
+    background-color: rgb(48, 156, 171);
+}
+
+/* Css for footer */
+footer{
+    color:#303030;
+    font-size:1.1rem;
+    margin:2rem 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+  .header{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact_icons{
+    margin-top:1.5rem;
+  }
+  .main_container{
+    display:flex;
+    flex-direction:column;
+}
+.pages_btn button{
+    background-color: black;
+    color:white;
+    margin-right:0.3rem;
+    margin-top:1rem;
+    height:3rem;
+    width: 3rem;
+    font-size: 1.1rem;
+}
+.main_container{
+    padding-right: 0.5rem;
+}
+body{
+     padding:0 2rem;
+}
+.expand_btn{
+    display:block;
+}
+.navbas_list{
+    display: none;
+}
+li{
+    display:block;
+    padding-right:2rem;
+    padding-left:1rem;
+    font-size:17px;
+    line-height: 50px;
+    font-weight:20px;
+    font-family: 'Titillium Web', sans-serif;
+}
+ul{
+    background-color:black;
+    color:white;
+}
+
+}
+
+.expand_btn{
+    height:2rem;
+}
+.icon-dashed {
+    content: url('./img/3dashed.png');
+  }
+  
+  .icon-cross {
+    content: url('./img/cross.png');
+  }
