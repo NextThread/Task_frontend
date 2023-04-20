@@ -178,3 +178,15 @@
         color: orangered;
         text-decoration: none;
     }
+     body {
+        width: 1350px;
+        margin: 0 auto;
+        background-repeat: repeat-x;
+        background-size: 1366;
+    }
+   
+    
+    div {
+        text-align: justify;
+        margin: 0 auto;
+    }
