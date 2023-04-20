@@ -143,23 +143,38 @@
         top:100px;
         font-size: 30px;
     }
-    .fa-square-twitter{
-        color: skyblue;
-
+   .fa-square-twitter {
+        color: rgb(53, 194, 241);
     }
-    .fa-youtube{
+
+    .fa-youtube {
         color: red;
     }
-    .fa-telegram{
-        color: blue;
-    }
-    .fa-instagram{
-        color: crimson;
-    }
-    .fa-facebook{
-        color: blue;
-    }
-    .fa-linkedin{
-        color: blue;
+
+    .fa-linkedin {
+        color: rgb(62, 193, 233);
     }
 
+    .fa-instagram {
+        color: rgb(236, 78, 38);
+    }
+
+    .fa-telegram {
+        color: rgb(9, 43, 117);
+    }
+
+    .fa-facebook {
+
+        color: rgb(62, 62, 230)
+    }
+
+    .side-scripts {
+        position: absolute;
+        right: 10px;
+        color: orangered;
+    }
+
+    .information {
+        color: orangered;
+        text-decoration: none;
+    }
